@@ -1,0 +1,1 @@
+Week 2 was about installing Django on PythonEveryWhere and how to deal with repo, files, bash using linux
