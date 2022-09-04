@@ -1,0 +1,25 @@
+
+<!-- saved from url=(0130)https://www.pythonanywhere.com/user/AbdelrahmanSalem/files/home/AbdelrahmanSalem/dj4e-samples/autos/templates/autos/make_list.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>{% extends "base_bootstrap.html" %}
+
+{% block content %}
+  <h1>Make List</h1>
+  {% if make_list %}
+  <ul>
+    {% for make in make_list %}
+      <li>
+          {{ make.name }}
+         (<a href="https://www.pythonanywhere.com/user/AbdelrahmanSalem/files/home/AbdelrahmanSalem/dj4e-samples/autos/templates/autos/%7B%%20url%20&#39;autos:make_update&#39;%20make.id%20%%7D">Update</a> |
+          <a href="https://www.pythonanywhere.com/user/AbdelrahmanSalem/files/home/AbdelrahmanSalem/dj4e-samples/autos/templates/autos/%7B%%20url%20&#39;autos:make_delete&#39;%20make.id%20%%7D">Delete</a>)
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no makes in the library.</p>
+  {% endif %}
+  <p><a href="https://www.pythonanywhere.com/user/AbdelrahmanSalem/files/home/AbdelrahmanSalem/dj4e-samples/autos/templates/autos/%7B%%20url%20&#39;autos:make_create&#39;%20%%7D">Add a make</a></p>
+  <p>
+    <a href="https://www.pythonanywhere.com/user/AbdelrahmanSalem/files/home/AbdelrahmanSalem/dj4e-samples/autos/templates/autos/%7B%%20url%20&#39;autos:all&#39;%20%%7D">Back to autos</a>
+  </p>
+{% endblock %}
+</body></html>

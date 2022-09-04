@@ -1,0 +1,15 @@
+
+<!-- saved from url=(0130)https://www.pythonanywhere.com/user/AbdelrahmanSalem/files/home/AbdelrahmanSalem/dj4e-samples/autos/templates/autos/auto_form.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>{% extends "base_bootstrap.html" %}
+
+{% block content %}
+  <form action="https://www.pythonanywhere.com/user/AbdelrahmanSalem/files/home/AbdelrahmanSalem/dj4e-samples/autos/templates/autos/auto_form.html" method="post">
+    {% csrf_token %}
+    
+    {{ form.as_table }}
+    <table></table>
+    <input type="submit" value="Submit">
+    <input type="submit" onclick="window.location=&#39;{% url &#39;autos:all&#39; %}&#39; ; return false;" value="Cancel">
+  </form>
+{% endblock %}
+</body></html>

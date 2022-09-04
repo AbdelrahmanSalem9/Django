@@ -1,0 +1,17 @@
+
+<!-- saved from url=(0140)https://www.pythonanywhere.com/user/AbdelrahmanSalem/files/home/AbdelrahmanSalem/dj4e-samples/autos/templates/autos/auto_confirm_delete.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>{% extends "base_bootstrap.html" %}
+
+{% block content %}
+
+<h1>Delete Auto</h1>
+
+<p>Are you sure you want to delete the auto: {{ auto }}?</p>
+
+<form action="https://www.pythonanywhere.com/user/AbdelrahmanSalem/files/home/AbdelrahmanSalem/dj4e-samples/autos/templates/autos/auto_confirm_delete.html" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Yes, delete.">
+</form>
+
+{% endblock %}
+</body></html>

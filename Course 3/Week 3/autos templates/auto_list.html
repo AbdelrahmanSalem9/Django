@@ -1,0 +1,33 @@
+
+<!-- saved from url=(0130)https://www.pythonanywhere.com/user/AbdelrahmanSalem/files/home/AbdelrahmanSalem/dj4e-samples/autos/templates/autos/auto_list.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>{% extends "base_bootstrap.html" %}
+
+{% block content %}
+  <h1>Auto List</h1>
+  {% if auto_list %}
+  <ul>
+    {% for auto in auto_list %}
+      <li>
+          {{ auto.nickname }} ({{ auto.make }})
+          (<a href="https://www.pythonanywhere.com/user/AbdelrahmanSalem/files/home/AbdelrahmanSalem/dj4e-samples/autos/templates/autos/%7B%%20url%20&#39;autos:auto_update&#39;%20auto.id%20%%7D">Update</a> |
+          <a href="https://www.pythonanywhere.com/user/AbdelrahmanSalem/files/home/AbdelrahmanSalem/dj4e-samples/autos/templates/autos/%7B%%20url%20&#39;autos:auto_delete&#39;%20auto.id%20%%7D">Delete</a>) <br>
+          {{ auto.comments }} ({{ auto.mileage }} miles)
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no autos in the library.</p>
+  {% endif %}
+  <p>
+    {% if make_count &gt; 0 %}
+      <a href="https://www.pythonanywhere.com/user/AbdelrahmanSalem/files/home/AbdelrahmanSalem/dj4e-samples/autos/templates/autos/%7B%%20url%20&#39;autos:auto_create&#39;%20%%7D">Add an auto</a>
+    {% else %}
+      Please add a make before you add an auto.
+    {% endif %}
+  </p>
+  <p>
+  <a href="https://www.pythonanywhere.com/user/AbdelrahmanSalem/files/home/AbdelrahmanSalem/dj4e-samples/autos/templates/autos/%7B%%20url%20&#39;autos:make_list&#39;%20%%7D">View makes</a> ({{ make_count }}) | 
+    <a href="https://www.pythonanywhere.com/user/AbdelrahmanSalem/files/home/AbdelrahmanSalem/dj4e-samples/autos/templates/autos/%7B%%20url%20&#39;autos:make_create&#39;%20%%7D">Add a make</a>
+  </p>
+{% endblock %}
+</body></html>
